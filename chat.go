@@ -86,12 +86,26 @@ type ChatMessagePartType string
 const (
 	ChatMessagePartTypeText     ChatMessagePartType = "text"
 	ChatMessagePartTypeImageURL ChatMessagePartType = "image_url"
+	ChatMessagePartTypeAudio    ChatMessagePartType = "input_audio"
 )
 
 type ChatMessagePart struct {
 	Type     ChatMessagePartType  `json:"type,omitempty"`
 	Text     string               `json:"text,omitempty"`
 	ImageURL *ChatMessageImageURL `json:"image_url,omitempty"`
+	Audio    *ChatMessageAudio    `json:"input_audio,omitempty"`
+}
+
+type Format string
+
+const (
+	FormatWav Format = "wav"
+	FormatMp3 Format = "mp3"
+)
+
+type ChatMessageAudio struct {
+	Data   string `json:"data,omitempty"`
+	Format Format `json:"format,omitempty"`
 }
 
 type ChatCompletionMessage struct {
