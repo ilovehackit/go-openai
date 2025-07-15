@@ -33,6 +33,7 @@ const (
 	GPT4o20241120           = "gpt-4o-2024-11-20"
 	GPT4oLatest             = "chatgpt-4o-latest"
 	GPT4oMini               = "gpt-4o-mini"
+	GPT4oMiniAudioPreview   = "gpt-4o-mini-audio-preview"
 	GPT4oMini20240718       = "gpt-4o-mini-2024-07-18"
 	GPT4Turbo               = "gpt-4-turbo"
 	GPT4Turbo20240409       = "gpt-4-turbo-2024-04-09"
